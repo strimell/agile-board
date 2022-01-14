@@ -1,7 +1,9 @@
+@use "../../styles/variables" as variables;
 
 .agileBoard {
   padding: 20px;
-  background-color: aliceblue;
-  border: 1px dashed #36a0ff;
-  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  //height: calc(100vh - #{variables.$navbar-height});
 }

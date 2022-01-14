@@ -1,0 +1,36 @@
+@use "../../styles/common" as common;
+
+$columnBackgroundColor: common.$gray-200;
+
+.column {
+  flex: 1;
+  padding: 5px;
+  max-width: 50%;
+  min-width: 50px;
+  height: 100%;
+  min-height: calc(100vh - #{common.$navbarHeight} - #{common.$agileBoardPadding * 2});
+  border-radius: 3px;
+  background-color: $columnBackgroundColor;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__header {
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: start;
+    font-weight: 500;
+  }
+}

@@ -1,4 +1,5 @@
+@use "../../styles/common" as common;
 
 .navbar {
-
+  height: common.$navbarHeight;
 }
