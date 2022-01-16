@@ -1,8 +1,9 @@
 @use "../../styles/common" as common;
 
 $columnBackgroundColor: common.$gray-200;
+$columnShadow: common.$gray-400 1.95px 1.95px 2.6px;
 
-.column {
+.boardColumn {
   flex: 1;
   padding: 5px;
   max-width: 50%;
@@ -11,7 +12,7 @@ $columnBackgroundColor: common.$gray-200;
   min-height: calc(100vh - #{common.$navbarHeight} - #{common.$agileBoardPadding * 2});
   border-radius: 3px;
   background-color: $columnBackgroundColor;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  box-shadow: $columnShadow;
 
   &:not(:last-child) {
     margin-right: 10px;
@@ -26,6 +27,7 @@ $columnBackgroundColor: common.$gray-200;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 5px;
   }
 
   &__title {

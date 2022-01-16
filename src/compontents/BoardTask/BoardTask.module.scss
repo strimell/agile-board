@@ -1,0 +1,32 @@
+@use "../../styles/common" as common;
+
+$boardTaskShadow: common.$gray-400 0px 2px 8px 0px;
+$boardTaskBorderRadius: 3px;
+
+.boardTask {
+  position: relative;
+  width: 100%;
+  min-height: 80px;
+  padding: 8px;
+  box-shadow: $boardTaskShadow;
+  border-radius: $boardTaskBorderRadius;
+  background-color: common.$white;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &:before {
+    display: block;
+    content: "";
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #E6F6CF;
+    border-right: solid 1px transparent;
+    border-top-left-radius: $boardTaskBorderRadius;
+    border-bottom-left-radius: $boardTaskBorderRadius;
+  }
+}
