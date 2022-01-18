@@ -1,16 +1,21 @@
-@use "../../styles/common" as common;
+@use "../../styles/common";
 
 $boardTaskShadow: common.$gray-400 0px 2px 8px 0px;
+$boardTaskShadow: common.$gray-400 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;;
 $boardTaskBorderRadius: 3px;
 
 .boardTask {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   min-height: 80px;
-  padding: 8px;
+  padding: 8px 15px;
   box-shadow: $boardTaskShadow;
   border-radius: $boardTaskBorderRadius;
   background-color: common.$white;
+  font-size: common.$font-size-base * 0.9;
 
   &:not(:last-child) {
     margin-bottom: 10px;
@@ -19,7 +24,7 @@ $boardTaskBorderRadius: 3px;
   &:before {
     display: block;
     content: "";
-    width: 4px;
+    width: 6px;
     height: 100%;
     position: absolute;
     left: 0;
@@ -28,5 +33,24 @@ $boardTaskBorderRadius: 3px;
     border-right: solid 1px transparent;
     border-top-left-radius: $boardTaskBorderRadius;
     border-bottom-left-radius: $boardTaskBorderRadius;
+  }
+
+  &__summary {
+    margin-bottom: 7px;
+  }
+
+  &__id {
+    margin-right: 5px;
+    color: common.$secondary;
+    text-decoration: none;
+
+    &:hover {
+      color: common.$primary;
+      text-decoration: underline;
+    }
+  }
+
+  &__footer {
+    display: block;
   }
 }

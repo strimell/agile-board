@@ -1,7 +1,8 @@
-@use "../../styles/common" as common;
+@use "../../styles/common";
 
 $columnBackgroundColor: common.$gray-200;
-$columnShadow: common.$gray-400 1.95px 1.95px 2.6px;
+//$columnShadow: common.$gray-400 1.95px 1.95px 2.6px;
+$columnShadow: common.$gray-400 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;;
 
 .boardColumn {
   flex: 1;

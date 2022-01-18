@@ -1,6 +1,7 @@
 import React from "react"
 import { Task } from "../../models/task"
 import styles from "./BoardTask.module.scss"
+import UserCard from "../UserCard/UserCard"
 
 export interface BoardTaskProps {
     task: Task
@@ -8,13 +9,20 @@ export interface BoardTaskProps {
 
 const BoardTask: React.FC<BoardTaskProps> = props => {
     const {
-        task: { Title, Author }
+        task: { Id, Title, Author }
     } = props
 
     return (
         <div className={styles.boardTask}>
-            <div>{Title}</div>
-            <div>{Author.Name}</div>
+            <div className={styles.boardTask__summary}>
+                <a className={styles.boardTask__id} href="/#" rel="noopener noreferrer">
+                    {Id}
+                </a>
+                <span>{Title}</span>
+            </div>
+            <div className={styles.boardTask__footer}>
+                <UserCard user={Author} />
+            </div>
         </div>
     )
 }

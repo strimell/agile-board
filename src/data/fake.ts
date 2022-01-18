@@ -5,25 +5,25 @@ import { Column } from "../models/column"
 const jake: User = {
     Id: "1",
     Name: "Jake",
-    AvatarUrl: "http://adventuretime.wikia.com/wiki/Jake"
+    AvatarUrl: "https://i.pravatar.cc/20?img=1"
 }
 
 const BMO: User = {
     Id: "2",
     Name: "BMO",
-    AvatarUrl: "http://adventuretime.wikia.com/wiki/BMO"
+    AvatarUrl: "https://i.pravatar.cc/20?img=2"
 }
 
 const finn: User = {
     Id: "3",
     Name: "Finn",
-    AvatarUrl: "http://adventuretime.wikia.com/wiki/Finn"
+    AvatarUrl: "https://i.pravatar.cc/20?img=3"
 }
 
 const princess: User = {
     Id: "4",
     Name: "Princess bubblegum",
-    AvatarUrl: "http://adventuretime.wikia.com/wiki/Princess_Bubblegum"
+    AvatarUrl: "https://i.pravatar.cc/20?img=4"
 }
 
 export const tasks: Task[] = [
